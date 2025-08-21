@@ -1,0 +1,4 @@
+### IGNORANDO VENV
+venv/
+.vscode/
+__pycache
