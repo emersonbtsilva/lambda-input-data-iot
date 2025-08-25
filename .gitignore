@@ -1,4 +1,7 @@
 ### IGNORANDO VENV
 venv/
 .vscode/
-__pycache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
