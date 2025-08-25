@@ -18,8 +18,8 @@ jobs:
           unzip awscliv2.zip
           sudo ./aws/install --update
 
-      - name: Zip all repo
-        run: zip -r function.zip . -x '*.git*' '*.vscode*' '*venv*' '*__pycache__*' '*.pyc'
+      - name: Zip Lambda code only
+        run: zip -r function.zip src requirements.txt
 
       - name: Deploy to AWS Lambda
         env:
