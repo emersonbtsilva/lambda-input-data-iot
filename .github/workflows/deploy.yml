@@ -19,7 +19,7 @@ jobs:
           sudo ./aws/install --update
 
       - name: Zip Lambda code only
-        run: zip -r function.zip src requirements.txt
+        run: zip -r function.zip app/src app/requirements.txt
 
       - name: Deploy to AWS Lambda
         env:
