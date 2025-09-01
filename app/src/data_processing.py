@@ -1,6 +1,7 @@
 import time
 import random
 import json
+from datetime import datetime, timezone
 
 def generate_mock_payload(machine_id="maquina_001", sensor_id="sensor_pressao_01"):
     """
@@ -19,7 +20,7 @@ def generate_mock_payload(machine_id="maquina_001", sensor_id="sensor_pressao_01
 
     payload = {
         "machine_id": machine_id,
-        "timestamp": int(time.time()),
+        "timestamp": datetime.now(timezone.utc).isoformat(timespec='seconds').replace('+00:00', 'Z'),
         "properties": sensor_data
     }
     return payload

@@ -1,0 +1,1 @@
+s3_bucket_name="dev-us-east-1-iot-digitaltwinproject"
